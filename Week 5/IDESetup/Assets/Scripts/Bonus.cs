@@ -20,10 +20,12 @@ public class Bonus : MonoBehaviour {
 
     public void Pickup() {
         counter--;
+        Debug.Log(counter + " are left");
         if (counter == 0) {
+            Debug.Log("spawn bonus");
             SpawnBonus();
         }
-            Debug.Log("Pickup message recieved");
+            
     }
 
     void SpawnBonus() {
