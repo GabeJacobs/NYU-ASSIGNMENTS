@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 public class Oscillator : MonoBehaviour {
 
@@ -32,13 +34,23 @@ public class Oscillator : MonoBehaviour {
 
     }
 
+    public void restartWithDirection(Vector3 axis) {
+        direction = axis.normalized;
+        
+        //precompute positions
+        var position = transform.position;
+        startingPosition = position;
+        posEnd = position + (direction * movementDistance);
+        negEnd = position - (direction * movementDistance);
+    }
+
     // Update is called once per frame
     void FixedUpdate() {
         
         
         //if we reach the bounds of the movement, reverse
-        if (Vector3.Distance(transform.position, posEnd) < 0.01f ||
-            Vector3.Distance(transform.position, negEnd) < 0.01f) {
+        if (Vector3.Distance(transform.position, posEnd) <= 0.5f ||
+            Vector3.Distance(transform.position, negEnd) <= 0.5f) {
             direction *= -1;
         }
         // move the platform

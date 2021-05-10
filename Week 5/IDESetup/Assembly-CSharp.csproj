@@ -52,13 +52,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ThirdPersonMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerManager.cs" />
-     <Compile Include="Assets\Scripts\PlayerAttacher.cs" />
-     <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\HelloWorld.cs" />
-     <Compile Include="Assets\Scripts\Rotator.cs" />
+     <Compile Include="Assets\Scripts\ThirdPersonMovement.cs" />
      <Compile Include="Assets\Scripts\Oscillator.cs" />
+     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\Rotator.cs" />
+     <Compile Include="Assets\Scripts\PlayerAttacher.cs" />
+     <Compile Include="Assets\Scripts\MaterialPulse.cs" />
+     <Compile Include="Assets\Scripts\Bonus.cs" />
+     <Compile Include="Assets\Scripts\PlatformTrigger.cs" />
+     <Compile Include="Assets\Scripts\ControlledLift.cs" />
      <None Include="Assets\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Emissive Diffuse.shader" />
      <None Include="Assets\Shaders\GradientSkybox.shader" />
  <Reference Include="UnityEngine">

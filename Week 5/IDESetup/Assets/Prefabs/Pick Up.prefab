@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 65258114465959240}
   - component: {fileID: 23681593531102484}
   - component: {fileID: 54311007122832586}
+  - component: {fileID: 199948931}
+  - component: {fileID: 199948935}
   m_Layer: 0
   m_Name: Pick Up
   m_TagString: Pick Up
@@ -70,6 +72,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -94,6 +97,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!54 &54311007122832586
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -110,3 +114,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &199948931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162076593523988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db994447fbb92457b99217f91561df7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxOpacity: 1
+  minOpacity: 0.02
+  opacityStep: 0.02
+  objectRenderer: {fileID: 23681593531102484}
+  objectMaterial: {fileID: 2100000, guid: e97707e7f57a33744ace491dd9625b91, type: 2}
+--- !u!114 &199948935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162076593523988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5775c882205b422e88000eb09936b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angle: 1
+  rotationAxis: {x: 1, y: 1, z: 0}
