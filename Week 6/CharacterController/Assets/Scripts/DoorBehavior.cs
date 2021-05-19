@@ -13,39 +13,36 @@ public class DoorBehavior : MonoBehaviour
     private Vector3 closedPos;
 
     //the amount of frames the door open animation should take
-    public float frames;
-
+    public float seconds;
     private void Start()
     {
-        //Assume the door starts closed. how would you fix this if you can't make this assumption?
         closedPos = transform.position;
         openPos = closedPos + (movementAxis * distance);
     }
 
     public void CloseGate()
     {
-        //Without Coroutines
-        //transform.Translate(movementAxis * distance * -1f, Space.World);
-
-        //Basic Coroutine in Frames
-        //StartCoroutine(DoorMove(openPos, closedPos, 1 / frames)); //door glitches out
 
         //Fix door jump glitch by stopping already running coroutines and startin from current position
         StopAllCoroutines(); //add to stop previously running coroutines
-        StartCoroutine(DoorMove(transform.position, closedPos, 1 / frames)); //What's the bug here, can you solve it?
+        if (seconds <= 0) {
+            seconds = 1;
+            // stops divide by 0 error
+        }
+        StartCoroutine(DoorMove(transform.position, closedPos, (1/seconds) *  Time.deltaTime));
+        
     }
 
     public void OpenGate()
     {
-        //Without Coroutines
-        //transform.Translate(movementAxis * distance, Space.World);
-
-        //Basic Coroutine in Frames
-        //StartCoroutine(DoorMove(closedPos, openPos, 1 / frames)); //door glitches out
-
+  
         //Fix door jump glitch by stopping already running coroutines and startin from current position
         StopAllCoroutines();
-        StartCoroutine(DoorMove(transform.position, openPos, 1 / frames)); //What's the bug here, can you solve it?
+        if (seconds <= 0) {
+            seconds = 1; 
+            // stops divide by 0 error
+        }
+        StartCoroutine(DoorMove(transform.position, openPos, (1/seconds) *  Time.deltaTime)); //What's the bug here, can you solve it?
     }
 
     IEnumerator DoorMove(Vector3 startPos, Vector3 endPos, float step)

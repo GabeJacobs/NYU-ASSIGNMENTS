@@ -7323,7 +7323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
-  speed: 10
+  speed: 15
   rb: {fileID: 0}
 --- !u!54 &858863506
 Rigidbody:
@@ -9629,7 +9629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementAxis: {x: 0, y: 0, z: 0}
   distance: 0
-  frames: 0
+  seconds: 0
 --- !u!1 &1109930837
 GameObject:
   m_ObjectHideFlags: 0
@@ -9740,8 +9740,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementAxis: {x: 1, y: 0, z: 0}
-  distance: 5
-  frames: 60
+  distance: 3
+  seconds: 1
 --- !u!1 &1114289815
 GameObject:
   m_ObjectHideFlags: 0
@@ -18746,8 +18746,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementAxis: {x: -1, y: 0, z: 0}
-  distance: 5
-  frames: 60
+  distance: 3
+  seconds: 1
 --- !u!1 &2057750425
 GameObject:
   m_ObjectHideFlags: 0
